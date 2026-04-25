@@ -34,6 +34,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 DEBUG = os.getenv('DEBUG') == 'True'
 
 ALLOWED_HOSTS = ['erp-sorveteria-production.up.railway.app', '127.0.0.1', 'localhost']
+CSRF_TRUSTED_ORIGINS = ['https://erp-sorveteria-production.up.railway.app']
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
