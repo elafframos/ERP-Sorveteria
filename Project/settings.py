@@ -14,6 +14,16 @@ from pathlib import Path
 import os
 import dj_database_url
 from dotenv import load_dotenv
+import dj_database_url # Importe no topo do arquivo
+import os
+
+# Procure a parte DATABASES e substitua por isso:
+DATABASES = {
+    'default': dj_database_url.config(
+        default='sqlite:///db.sqlite3',
+        conn_max_age=600
+    )
+}
 
 # Carrega as variáveis do arquivo .env
 load_dotenv()
