@@ -16,7 +16,6 @@ import dj_database_url
 from dotenv import load_dotenv
 
 load_dotenv()
-print(f"DATABASE_URL carregada: {os.getenv('DATABASE_URL')}")
 # Procure a parte DATABASES e substitua por isso:
 DATABASES = {
     'default': dj_database_url.config(conn_max_age=600)
