@@ -17,10 +17,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from App.views import login_operador, logout_operador
+from rest_framework.authtoken import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('App.urls')), 
-    path('api/login/', login_operador), # Inclui as URLs da aplicação
+    path('api/login/', views.obtain_auth_token), # Inclui as URLs da aplicação
     path('api/logout/', logout_operador, name='logout'),
 ]
