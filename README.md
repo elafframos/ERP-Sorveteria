@@ -86,7 +86,7 @@ python manage.py runserver
 A API utiliza Token Authentication. Para acessar os endpoints protegidos, inclua o token no header da requisição:
 
 ```
-Authorization: Token seu_token_aqui
+Authorization:
 ```
 
 > Credenciais de teste disponíveis mediante solicitação.
